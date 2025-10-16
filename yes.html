@@ -3,23 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/yes.css">
-    <!-- Include any additional stylesheets or meta tags here -->
+    <title>Hoorayy!!!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #CBE6EF;
+            flex-direction: column;
+        }
+
+        .header_text, .text {
+            font-family: 'Nunito', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .gif_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -60px;
+        }
+
+        .text {
+            margin-top: -30px;
+        }
+
+        .btn {
+            background-color: #80c3d8;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FAF9F6;
+        }
+
+        .made-with-love {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #777;
+        }
+
+        .github-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div>
-            <h1 class="header_text">Hoorayy!!!</h1>
-        </div>
+        <h1 class="header_text">Hoorayy!!!</h1>
+
         <div class="gif_container">
-            <img src="https://i.gifer.com/Pak.gif" alt="Cute animated illustration" style="margin-top: -60px;">
+            <img src="https://i.gifer.com/Pak.gif" alt="Cute animated illustration">
         </div>
-        <!-- Adjusted position of the text element by 100px -->
-        <p class="text" style="margin-top: -30px;">You're now Wannn's gf</p>
+
+        <p class="text">You're now Wannn's gf 💖</p>
+
+        <button class="btn" onclick="goBack()">Go Back</button>
     </div>
 
+    <div class="made-with-love">
+        Made with ❤️ by <a href="#" class="github-link">Wannn</a>
+    </div>
 
-
-    <!-- Include any external scripts if needed -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
