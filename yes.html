@@ -3,93 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoorayy!!!</title>
+    <title>Yes Page 💖</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background-color: #CBE6EF;
-            flex-direction: column;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        .header_text, .text {
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header_text {
             font-family: 'Nunito', sans-serif;
             font-size: 50px;
             font-weight: bold;
             color: white;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 0;
+            margin: 0;
+        }
+
+        .text {
+            font-family: 'Nunito', sans-serif;
+            font-size: 24px;
+            color: white;
+            margin-top: 10px;
         }
 
         .gif_container {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: -60px;
+            margin-top: -40px;
         }
 
-        .text {
-            margin-top: -30px;
+        .gif_container img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
         }
 
-        .btn {
-            background-color: #80c3d8;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 16px;
-            margin-top: 30px;
-            cursor: pointer;
-            border: none;
-            border-radius: 12px;
-            transition: background-color 0.3s ease;
-        }
+        @media (max-width: 600px) {
+            .header_text {
+                font-size: 32px;
+            }
 
-        .btn:hover {
-            background-color: #FAF9F6;
-        }
+            .text {
+                font-size: 18px;
+            }
 
-        .made-with-love {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            color: #777;
-        }
-
-        .github-link {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
+            .gif_container img {
+                max-width: 250px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="header_text">Hoorayy!!!</h1>
-
+        <h1 class="header_text">Hoorayy!!! 🎉</h1>
         <div class="gif_container">
             <img src="https://i.gifer.com/Pak.gif" alt="Cute animated illustration">
         </div>
-
         <p class="text">You're now Wannn's gf 💖</p>
-
-        <button class="btn" onclick="goBack()">Go Back</button>
     </div>
-
-    <div class="made-with-love">
-        Made with ❤️ by <a href="#" class="github-link">Wannn</a>
-    </div>
-
-    <script>
-        function goBack() {
-            window.location.href = "index.html";
-        }
-    </script>
 </body>
 </html>
