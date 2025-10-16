@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./Styles/styles.css">
-    <script src="./script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
     <style>
-        /* Add your existing styles here */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #CBE6EF;
+        }
 
-        /* Additional style for the note */
+        /* Position the "No" button absolutely within body */
+        #noButton {
+            position: absolute;
+            margin-left: 150px;
+            transition: 0.5s;
+            border: 2px solid #ffffff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #yesButton {
+            position: absolute;
+            margin-right: 150px;
+            border: 2px solid #ffffff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header_text {
+            font-family: 'Nunito', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 55px;
+            margin-left: 20px;
+        }
+
+        .btn {
+            background-color: #80c3d8;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FAF9F6;
+        }
+
+        .gif_container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-left: 20px;
+        }
+
+        /* Catatan di bawah */
         .made-with-love {
             position: fixed;
-            bottom: 10px; /* Adjust this value to move it closer to the bottom */
+            bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -28,15 +95,33 @@
         <div>
             <h1 class="header_text">Alana, Will you be my Girlfriend? hehe</h1>
         </div>
+
         <div class="gif_container">
             <img src="https://64.media.tumblr.com/44437aaa3af65ef5b5dc25b2cf1e81d1/6acc7d78ea83e207-45/s400x600/5b30035952803850ed3136fbe760ceff97ee8d19.gif" alt="Cute animated illustration">
         </div>
+
         <div class="buttons">
             <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
             <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
         </div>
-
-
     </div>
+
+    <div class="made-with-love">
+        Made with ❤️ by <a href="#" class="github-link">you</a>
+    </div>
+
+    <script>
+        function nextPage() {
+            alert("Yay! ❤️");
+        }
+
+        function moveButton() {
+            const noButton = document.getElementById('noButton');
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
 </body>
 </html>
